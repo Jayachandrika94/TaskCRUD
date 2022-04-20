@@ -1,0 +1,20 @@
+<div class="container-fluid mt-3">
+    <button class="btn btn-primary btn-sm" style="width:'150px'; height:'30px'" routerLink="/add">Add Iteam</button>
+
+    <div class="row mt-4">
+        <div class="col-md-4" *ngFor="let v of getData">
+
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title text-center">{{v.productName }}</h5>
+                <div class="card-body">
+                    <img src="{{ v.productImageURL}}" width="100%" alt="">
+                    <p class="card-text text-center"> Price:{{v.productPrice}}</p>
+                    <p class="card-text">{{v.productDescription}}</p>
+                    <button class="btn btn-danger" type="button" routerLink="/view" (click)="delete(v._id)">delete</button>&nbsp;
+
+                    <button class="btn btn-primary" type="button" (click)="editProduct(v)">edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

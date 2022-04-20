@@ -1,0 +1,32 @@
+<p>edit works!</p>
+<div class="container">
+    <mat-dialog-content class="mat-typography">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form [formGroup]="productEdit">
+                    <div>
+                        <label for="">Product Name</label><br>
+                        <input type="text" formControlName="productName">
+                    </div>
+                    <div>
+                        <label for="">Product Image URL</label><br>
+                        <input type="text" formControlName="productImageURL">
+                    </div>
+                    <div>
+                        <label for="">Product Price</label><br>
+                        <input type="number" formControlName="productPrice">
+                    </div>
+                    <div>
+                        <label for="">Product Description</label><br>
+                        <input type="text" formControlName="productDescription">
+                    </div>
+                    <div class="footer">
+                        <button (click)="EditProduct()" routerLink="/view" class="bg-primary">Add Iteam</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </mat-dialog-content>
+</div>

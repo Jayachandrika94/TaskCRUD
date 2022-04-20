@@ -1,0 +1,21 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form  style="border:1px soild black;box-shadow:0px 0px 3px 3px grey ;padding: 40px; background-color:white;" [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+
+                <button [disabled]="loginForm.invalid"   style="margin-left:130px;" type="submit" class="btn btn-primary">Login</button>
+               <p style="margin-top:10px;"> you Donot have account ? please <a routerLink="/reg">Register</a></p>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
